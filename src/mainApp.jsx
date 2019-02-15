@@ -8,7 +8,7 @@ const MainApp = (props) => {
     return (<table className="ui fixed table">
         <thead>
             <tr>
-                <th>{props.titleOne}</th>
+                <th>{props.state.title[0]}</th>
             </tr>
         </thead>
         <tbody>
@@ -16,7 +16,7 @@ const MainApp = (props) => {
         </tbody>
         <thead>
             <tr>
-                <th>{props.titleTwo}</th>
+                <th>{props.state.title[1]}</th>
             </tr>
         </thead>
         <tbody>

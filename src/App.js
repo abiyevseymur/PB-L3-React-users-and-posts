@@ -9,11 +9,13 @@ import MainApp from './mainApp';
 let getUsers = () => axios.get("https://jsonplaceholder.typicode.com/users")
 let getComments = () => axios.get("https://jsonplaceholder.typicode.com/posts")
 
-
+let data = new Date().toLocaleTimeString()    
+console.log(typeof data)
 class App extends Component {
   state = {
     users: [],
-    comments: []
+    comments: [],
+    title:["Usernames","Comments"]
   }
 
   componentDidMount() {
@@ -28,11 +30,10 @@ class App extends Component {
         this.setState({ users, comments })
       }))
       .catch((err) => console.log(err))
-
   }
 
   render() {
-    return <MainApp state={this.state} titleOne = {"userName"} titleTwo = {"Comments"}/>
+    return <MainApp state={this.state} />
   }
 }
 
