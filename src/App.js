@@ -9,7 +9,7 @@ import MainApp from './mainApp';
 let getUsers = () => axios.get("https://jsonplaceholder.typicode.com/users")
 let getComments = () => axios.get("https://jsonplaceholder.typicode.com/posts")
 
-let data = new Date().toLocaleTimeString()    
+
 console.log(typeof data)
 class App extends Component {
   state = {
