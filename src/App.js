@@ -15,7 +15,7 @@ class App extends Component {
     users: [],
     comments: [],
     titleUsers: ["ID", "Users","Username","e-mail","City","Street","Phone","Website","Company"],
-    titlePosts: [,"UserID","ID","Title","Body"]
+    titlePosts: ["UserID","ID","Title","Body"]
   }
 
   componentDidMount() {
