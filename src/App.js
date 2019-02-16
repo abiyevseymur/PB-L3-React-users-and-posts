@@ -10,12 +10,11 @@ let getUsers = () => axios.get("https://jsonplaceholder.typicode.com/users")
 let getComments = () => axios.get("https://jsonplaceholder.typicode.com/posts")
 
 
-console.log(typeof data)
 class App extends Component {
   state = {
     users: [],
     comments: [],
-    title:["Usernames","Comments"]
+    title: ["Usernames", "Comments"]
   }
 
   componentDidMount() {
@@ -23,15 +22,13 @@ class App extends Component {
       getUsers(),
       getComments()
     ])
-      .then(axios.spread((user, comment) => {
-
-        const users = user.data;
-        const comments = comment.data;
-        this.setState({ users, comments })
-      }))
+      .then((response) => {
+        const users = response[0].data;
+        const comments = response[1].data;
+        return this.setState({ users, comments })
+      })
       .catch((err) => console.log(err))
   }
-
   render() {
     return <MainApp state={this.state} />
   }
