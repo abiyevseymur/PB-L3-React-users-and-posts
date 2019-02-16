@@ -14,7 +14,8 @@ class App extends Component {
   state = {
     users: [],
     comments: [],
-    title: ["Usernames", "Comments"]
+    titleUsers: ["ID", "Users","Username","e-mail","City","Street","Phone","Website","Company"],
+    titlePosts: [,"UserID","ID","Title","Body"]
   }
 
   componentDidMount() {
@@ -31,6 +32,7 @@ class App extends Component {
   }
   render() {
     return <MainApp state={this.state} />
+    
   }
 }
 
