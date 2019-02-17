@@ -1,6 +1,6 @@
 import React from 'react';
-import UserComponent from './components/UserComponent/userComponent';
-import PostComponent from './components/PostComponent/postComponent';
+import UserComponent from './components/users';
+import PostComponent from './components/posts';
 
 const MainApp = (props) => {
 

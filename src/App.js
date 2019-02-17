@@ -30,9 +30,9 @@ class App extends Component {
       })
       .catch((err) => console.log(err))
   }
+
   render() {
     return <MainApp state={this.state} />
-    
   }
 }
 
