@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import MainApp from './mainApp';
+import Posts from './components/posts';
+import Users from './components/users';
 
 
 
@@ -32,7 +33,11 @@ class App extends Component {
   }
 
   render() {
-    return <MainApp state={this.state} />
+    return <>
+    <Users state = {this.state}/>
+    <Posts state = {this.state}/> 
+    </>
+    
   }
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PostComponent = props => {
+const Posts = props => {
 
     return (
     <table className="ui fixed table">
@@ -20,4 +20,4 @@ const PostComponent = props => {
     </table>)
 
 }
-export default PostComponent;
+export default Posts;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const UserComponent = props => {
+const Users = props => {
     return (
         <table className="ui fixed table" >
             <thead>
@@ -24,4 +24,4 @@ const UserComponent = props => {
         </table >)
 }
 
-export default UserComponent;
+export default Users;
