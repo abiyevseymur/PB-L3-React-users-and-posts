@@ -3,26 +3,22 @@ import './App.css';
 import axios from 'axios';
 import Posts from './components/posts';
 import Users from './components/users';
+import JsonHolder from './Api/jsonplaceholder'
 
-
-
-
-let getUsers = () => axios.get("https://jsonplaceholder.typicode.com/users")
-let getComments = () => axios.get("https://jsonplaceholder.typicode.com/posts")
 
 
 class App extends Component {
   state = {
     users: [],
     comments: [],
-    titleUsers: ["ID", "Users","Username","e-mail","City","Street","Phone","Website","Company"],
-    titlePosts: ["UserID","ID","Title","Body"]
+    titleUsers: [ "Users", "Username", "e-mail", "City", "Street", "Phone", "Website", "Company"],
+    titlePosts: ["UserID", "Title", "Body"]
   }
 
   componentDidMount() {
     axios.all([
-      getUsers(),
-      getComments()
+      JsonHolder("/users"),
+      JsonHolder("/posts")
     ])
       .then((response) => {
         const users = response[0].data;
@@ -34,10 +30,10 @@ class App extends Component {
 
   render() {
     return <>
-    <Users state = {this.state}/>
-    <Posts state = {this.state}/> 
+      <Users state={this.state} />
+      <Posts state={this.state} />
     </>
-    
+
   }
 }
 
